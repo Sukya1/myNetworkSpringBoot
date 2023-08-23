@@ -1,0 +1,10 @@
+body {
+  	background-image: url(../../assets/fix.gif);
+}
+body, div {
+	padding-top: 25px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	color: white;
+	text-align: center;
+	font-size:95px;
+}

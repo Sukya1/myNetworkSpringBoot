@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Join Network</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="../../css/form.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Let's Stay Connected</h1>
+			<!--the object refers to the name of the object past into the post request/ action is the value of the url in controller-->
+		<form action="#" th:action="@{/savePerson}" th:object="${person}" method="post">
+	 		
+	 		<div class="form-group">
+				 <label for="firstName">First Name: </label>
+	 			<input type="text" id="firstName" class="form-control" placeholder="eg.Jane..." th:field="*{firstName}" />
+	 		</div>
+	 		
+	 		<div class="form-group">
+				<label for="lastName">First Name: </label>
+	 			<input type="text" id="lastName" class="form-control" placeholder="eg.Doe..." th:field="*{lastName}" />
+	 		</div>
+	 		
+	 		<div class="form-group">
+				 <label for="Company"> Current Company: </label>
+	 			<input type="text" id="company" class ="form-control" placeholder="eg.TechTalentStrategy" th:field="*{company}" />
+	 		</div>
+			
+			<div class="form-group">
+				 <label for="linkedin">Enter a link to your Linkedin Profile:</label>
+	 			<input type="text" id="linkedin" class ="form-control" placeholder="eg.www.linkedin/sukya" th:field="*{linkedin}" />
+	 		</div>
+	 		<div class="form-group">
+				  <label for="GradYear"> Graduation Year: </label>
+	 			<input type="text" id="GradYear" class ="form-control" placeholder="eg.2025" th:field="*{gradYear}" />
+	 		</div>
+	 		<div class="form-group">
+				  <label for="number">Enter your mobile number:</label>
+	 			<input type="text" id="number" class ="form-control" placeholder="eg.1914353456" th:field="*{mobileNumber}" />
+	 		</div>
+	 		<div class="form-group">
+				<label for="connection">Where did we meet?</label>
+	 			<select id="connection" class="form-control" th:field="*{connectionType}">
+				  <option th:each="connection:${connections}"  th:text="${connection}"> </option>
+				</select>	 		
+	 		</div>
+	 		
+	 		
+	 		
+	 		<button class="btn btn-primary">Submit Your Profile</button>
+		</form>	
+			
+		</div>
+		<script src="../../webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>
+	</body>
+</html>

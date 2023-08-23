@@ -1,0 +1,12 @@
+body { 
+	font-size: xx-large;
+	background-color:rgb(217, 128, 207);
+	text-align: left;
+	margin-left:25%;
+	
+	font-weight: 120px ;
+}
+input,select {
+	width: 200px;
+	height: 20px;
+}
